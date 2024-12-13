@@ -27,7 +27,7 @@ const Header = () => {
           <FaMoon />
         </Button>
         <Link to='/sign-in'>
-          <Button className='bg-gradient-to-r from-black via-gray-900 to-gray-600 '>Sign In</Button>
+          <Button className='bg-gradient-to-r from-black via-gray-900 to-gray-600 ' outline>Sign In</Button>
         </Link>
         <Navbar.Toggle />
       </div>
