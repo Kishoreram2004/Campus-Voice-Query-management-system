@@ -64,7 +64,7 @@ const FooterCom = () => {
             <div className='mx-auto '>
                 <Footer.Copyright
                     href='#'
-                    by="Sahand's blog"
+                    by="Campus Voice"
                     year={new Date().getFullYear()}
                 />
             </div>
