@@ -1,22 +1,17 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "campusvoicequerymanagementsys.firebaseapp.com",
-  projectId: "campusvoicequerymanagementsys",
-  storageBucket: "campusvoicequerymanagementsys.firebasestorage.app",
-  messagingSenderId: "940875126623",
-  appId: "1:940875126623:web:7df2de97e1fe5a47c5c8ea",
-  measurementId: "G-9RYP8FJXSM"
+  authDomain: "let-s-blog-ea314.firebaseapp.com",
+  projectId: "let-s-blog-ea314",
+  storageBucket: "let-s-blog-ea314.appspot.com",
+  messagingSenderId: "1030674887794",
+  appId: "1:1030674887794:web:8545338eb1cd19749abeeb"
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
