@@ -24,11 +24,11 @@ const userSchema = new mongoose.Schema({
     },
     isStudent:{
         type:Boolean,
-        default:false,
+        default:true,
     },
     isStaff:{
         type:Boolean,
-        default:true,
+        default:false,
     }
     }, {timestamps: true}
 );
