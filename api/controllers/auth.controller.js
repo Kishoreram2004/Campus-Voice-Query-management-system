@@ -59,7 +59,7 @@ export const google = async (req,res,next)=>{
             const token = jwt.sign({id:user._id}, process.env.JWT_SECRET)
             const {password, ...rest} = user._doc;
             res.status(200).cookie('access_token',token, {
-                hhtpOnly: true,
+                httpOnly: true,
             }).json(rest);
         }
         else{
@@ -76,7 +76,7 @@ export const google = async (req,res,next)=>{
             const token = jwt.sign({id:newUser._id}, process.env.JWT_SECRET)
             const {password, ...rest} = req._doc;
             res.status(200).cookie('access_token',token, {
-                hhtpOnly:true,
+                httpOnly:true,
             }).json(rest);
         }
      } catch (error) {
