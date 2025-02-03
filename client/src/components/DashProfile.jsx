@@ -247,7 +247,7 @@ export default function DashProfile() {
               
               className='w-full bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black'
             >
-              Create a post
+              Query
             </Button>
           </Link>
         )}
