@@ -5,7 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 export default function CreatePost() {
   return (
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
-      <h1 className='text-center text-3xl my-7 font-semibold'>Create a post</h1>
+      <h1 className='text-center text-3xl my-7 font-semibold'>Write Your Query</h1>
       <form className='flex flex-col gap-4'>
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
@@ -17,30 +17,20 @@ export default function CreatePost() {
           />
           <Select>
             <option value='uncategorized'>Select a category</option>
-            <option value='javascript'>JavaScript</option>
-            <option value='reactjs'>React.js</option>
-            <option value='nextjs'>Next.js</option>
+            <option value='College Based'>College Based</option>
+            <option value='Hostel Based'>Hostel Based</option>
+            <option value='Transport Based'>Transport Based</option>
           </Select>
         </div>
-        <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
-          <FileInput type='file' accept='image/*' />
-          <Button
-            type='button'
-            gradientDuoTone='purpleToBlue'
-            size='sm'
-            outline
-          >
-            Upload image
-          </Button>
-        </div>
+        
         <ReactQuill
           theme='snow'
-          placeholder='Write something...'
+          placeholder='Type Here...'
           className='h-72 mb-12'
           required
         />
-        <Button type='submit' gradientDuoTone='purpleToPink'>
-          Publish
+        <Button type='submit' className='bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black'>
+          Post
         </Button>
       </form>
     </div>
