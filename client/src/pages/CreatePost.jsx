@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 export default function CreatePost() {
-    const [file, setFile] = useState(null);
     const [publishError, setPublishError] = useState(null);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({});

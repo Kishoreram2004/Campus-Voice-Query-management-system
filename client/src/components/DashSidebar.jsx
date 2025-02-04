@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import { TfiWrite } from "react-icons/tfi";
 
 export default function DashSidebar() {
   const location = useLocation();
@@ -49,13 +50,24 @@ export default function DashSidebar() {
             </Sidebar.Item>
           </Link>
           {currentUser.isStudent && (
+            <Link to='/create-post'>
+              <Sidebar.Item
+                active={tab === 'posts'}
+                icon={TfiWrite}
+                as='div'
+              >
+                Write Query
+              </Sidebar.Item>
+            </Link>
+          )}
+          {currentUser.isStudent && (
             <Link to='/dashboard?tab=posts'>
               <Sidebar.Item
                 active={tab === 'posts'}
                 icon={HiDocumentText}
                 as='div'
               >
-                Posts
+                Posted Queries
               </Sidebar.Item>
             </Link>
           )}

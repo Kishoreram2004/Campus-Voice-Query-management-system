@@ -240,17 +240,7 @@ export default function DashProfile() {
         >
           {loading ? 'Loading...' : 'Update'}
           </Button>
-          {currentUser.isStudent && (
-          <Link to={'/create-post'}>
-            <Button
-              type='button'
-              
-              className='w-full bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black'
-            >
-              Query
-            </Button>
-          </Link>
-        )}
+          
         </form>
         <div className="text-red-500 flex justify-between mt-5">
         <span onClick={() => setShowModal(true)} className='cursor-pointer'>
