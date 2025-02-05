@@ -78,6 +78,7 @@ export default function DashPosts() {
                 <Table.HeadCell>Date updated</Table.HeadCell>
                 <Table.HeadCell>Post title</Table.HeadCell>
                 <Table.HeadCell>Category</Table.HeadCell>
+                <Table.HeadCell>Stage</Table.HeadCell>
                 <Table.HeadCell>Delete</Table.HeadCell>
                 <Table.HeadCell>
                   <span>Edit</span>
@@ -99,6 +100,7 @@ export default function DashPosts() {
                       </Link>
                     </Table.Cell>
                     <Table.Cell>{post.category}</Table.Cell>
+                    <Table.Cell>{post.stage}</Table.Cell>
                     <Table.Cell>
                     <span
                       onClick={() => {

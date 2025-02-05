@@ -23,6 +23,10 @@ const postSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    stage: {
+        type: String,
+        default: 'Pending'
+    },
   },
   { timestamps: true }
 );
