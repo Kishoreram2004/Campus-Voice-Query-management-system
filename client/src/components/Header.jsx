@@ -84,12 +84,12 @@ const Header = () => {
         <Navbar.Link active={path === "/"} as={'div'}>
           <Link to='/'>Home</Link>
         </Navbar.Link>
-        {currentUser.isStudent && (<Navbar.Link active={path === '/create-post'} as={'div'}>
+        <Navbar.Link active={path === '/create-post'} as={'div'}>
           <Link to='/create-post'>Write Query</Link>
-        </Navbar.Link>)}
-        {currentUser.isStudent && (<Navbar.Link active={path === '/dashboard?tab=posts'} as={'div'}>
+        </Navbar.Link>
+        <Navbar.Link active={path === '/dashboard?tab=posts'} as={'div'}>
           <Link to='/dashboard?tab=posts'>Posted Queries</Link>
-        </Navbar.Link>)}
+        </Navbar.Link> 
         <Navbar.Link active={path === "/about"} as={'div'}>
           <Link to='/about'>About</Link>
         </Navbar.Link>

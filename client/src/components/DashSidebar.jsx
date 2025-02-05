@@ -49,7 +49,7 @@ export default function DashSidebar() {
               Profile
             </Sidebar.Item>
           </Link>
-          {currentUser.isStudent && (
+          
             <Link to='/create-post'>
               <Sidebar.Item
                 active={tab === 'posts'}
@@ -59,8 +59,8 @@ export default function DashSidebar() {
                 Write Query
               </Sidebar.Item>
             </Link>
-          )}
-          {currentUser.isStudent && (
+          
+          
             <Link to='/dashboard?tab=posts'>
               <Sidebar.Item
                 active={tab === 'posts'}
@@ -70,7 +70,7 @@ export default function DashSidebar() {
                 Posted Queries
               </Sidebar.Item>
             </Link>
-          )}
+          
           <Sidebar.Item
             icon={HiArrowSmRight}
             className='cursor-pointer'
