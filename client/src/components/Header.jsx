@@ -90,6 +90,9 @@ const Header = () => {
         <Navbar.Link active={path === '/dashboard?tab=posts'} as={'div'}>
           <Link to='/dashboard?tab=posts'>Posted Queries</Link>
         </Navbar.Link> 
+        <Navbar.Link active={path === '/dashboard?tab=users'} as={'div'}>
+          { currentUser.isAdmin && (<Link to='/dashboard?tab=users'>Users</Link>) }
+        </Navbar.Link> 
         <Navbar.Link active={path === "/about"} as={'div'}>
           <Link to='/about'>About</Link>
         </Navbar.Link>
