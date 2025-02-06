@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 import { FaCheck, FaTimes } from 'react-icons/fa';
+
 export default function DashComments() {
   const { currentUser } = useSelector((state) => state.user);
   const [comments, setComments] = useState([]);
@@ -27,7 +28,7 @@ export default function DashComments() {
     if (currentUser.isAdmin) {
       fetchComments();
     }
-    
+
   }, [currentUser._id]);
   const handleShowMore = async () => {
     const startIndex = comments.length;
