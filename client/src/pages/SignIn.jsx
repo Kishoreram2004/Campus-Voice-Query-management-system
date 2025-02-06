@@ -48,7 +48,7 @@ const SignIn = () => {
           <div className=''><Link to="/" className='text-4xl font-bold dark:text-white flex '> 
           <span className='px-2'>Campus Voice</span> 
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjcV87iVBssyJG82vfJCdDwS-rm0zU_YDtA&s" className='w-12
-          // h-15'></img>
+         h-15 rounded'></img>
           </Link></div>
           <p className='text-sm mt-5 px-2'>Join Campus Voice to streamline your queries and stay connected with your college's support system effortlessly!</p>
         </div>
@@ -63,7 +63,7 @@ const SignIn = () => {
                 <Label value = "Your password"/>
                 <TextInput type='password' placeholder='Password' id="password" onChange={handleChange}/>
             </div>
-            <Button className='bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black' disable= {loading} type='submit'>
+            <Button outline gradientDuoTone='purpleToPink' disable= {loading} type='submit'>
               {
                 loading ?
                 <>

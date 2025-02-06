@@ -49,7 +49,7 @@ const Header = () => {
     <Navbar className='border-b-2'>
       <Link to="/" className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white flex'> 
         <span className='px-2'>Campus Voice</span> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjcV87iVBssyJG82vfJCdDwS-rm0zU_YDtA&s"className='w-7 h-6'></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjcV87iVBssyJG82vfJCdDwS-rm0zU_YDtA&s"className='w-7 h-6 rounded'></img>
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -104,12 +104,19 @@ const Header = () => {
         <Navbar.Link active={path === "/"} as={'div'}>
           <Link to='/'>Home</Link>
         </Navbar.Link>
+        <Navbar.Link active={path === '/search'} as={'div'}>
+          <Link to='/search'>All Queries</Link>
+        </Navbar.Link> 
         <Navbar.Link active={path === '/create-post'} as={'div'}>
           <Link to='/create-post'>Write Query</Link>
         </Navbar.Link>
         <Navbar.Link active={path === '/dashboard?tab=posts'} as={'div'}>
-          <Link to='/dashboard?tab=posts'>Posted Queries</Link>
+          <Link to='/dashboard?tab=posts'>My Queries</Link>
         </Navbar.Link> 
+        <Navbar.Link active={path === '/dashboard?tab=profile'} as={'div'}>
+          <Link to='/dashboard?tab=profile'>Profile</Link>
+        </Navbar.Link> 
+
         {/* <Navbar.Link active={path === '/dashboard?tab=users'} as={'div'}>
           { currentUser.isAdmin && (<Link to='/dashboard?tab=users'>Users</Link>) }
         // </Navbar.Link>  */}   

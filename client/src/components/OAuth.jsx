@@ -36,7 +36,7 @@ const OAuth = () => {
         }
     }
   return (
-    <Button className='bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black' outline onClick={handleGoogleClick}>
+    <Button  gradientDuoTone='purpleToPink'  onClick={handleGoogleClick}>
         <AiFillGoogleCircle className='w-6 h-6 mr-2'/>
         Continue with Google
     </Button>

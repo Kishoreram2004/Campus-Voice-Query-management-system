@@ -56,7 +56,7 @@ export default function DashSidebar() {
               </Sidebar.Item>
             </Link>
           )}
-          <Link to='/dashboard?tab=profile'>
+          {currentUser.student || currentUser.staff && <Link to='/dashboard?tab=profile'>
             <Sidebar.Item
               active={tab === 'profile'}
               icon={HiUser}
@@ -66,7 +66,18 @@ export default function DashSidebar() {
             >
               Profile
             </Sidebar.Item>
-          </Link>
+          </Link>}
+          {currentUser.isAdmin && <Link to='/dashboard?tab=profile'>
+            <Sidebar.Item
+              active={tab === 'profile'}
+              icon={HiUser}
+              label='Admin'
+              labelColor='dark'
+              as='div'
+            >
+              Profile
+            </Sidebar.Item>
+          </Link>}
           
             <Link to='/create-post'>
               <Sidebar.Item
@@ -85,7 +96,7 @@ export default function DashSidebar() {
                 icon={HiOutlineUserGroup}
                 as='div'
               >
-                Users
+                Show Users
               </Sidebar.Item>
             </Link>
             <Link to='/dashboard?tab=comments'>
@@ -94,7 +105,7 @@ export default function DashSidebar() {
                 icon={HiAnnotation}
                 as='div'
               >
-                Comments
+                Show all Comments
               </Sidebar.Item>
             </Link>
           </>
@@ -106,7 +117,7 @@ export default function DashSidebar() {
                 icon={HiDocumentText}
                 as='div'
               >
-                Posted Queries
+                My Queries
               </Sidebar.Item>
             </Link>
           

@@ -10,7 +10,7 @@ const FooterCom = () => {
                 <div>
                     <Link to="/" className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white flex'> 
                        <span className='px-2'>Campus Voice</span> 
-                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjcV87iVBssyJG82vfJCdDwS-rm0zU_YDtA&s" className='w-7 h-6'></img>
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjcV87iVBssyJG82vfJCdDwS-rm0zU_YDtA&s" className='w-7 h-6 rounded'></img>
                     </Link>
                 </div>
                 <div className='grid grid-cols-2 gap-8 mt-6 sm:grid-cols-3 sm-gap-6 mx-2'>

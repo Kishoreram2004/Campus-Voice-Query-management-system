@@ -29,6 +29,10 @@ export default function DashPosts() {
       if (currentUser) {
         fetchPosts();
       }
+      if (currentUser.isAdmin) {
+        fetchPosts();
+      }
+      
     }, [currentUser._id]);
     const handleShowMore = async () => {
       const startIndex = userPosts.length;

@@ -64,7 +64,7 @@ const SignUp = () => {
                 <Label value = "Your password"/>
                 <TextInput type='password' placeholder='Password' id="password" onChange={handleChange}/>
             </div>
-            <Button className='bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black' disable= {loading} type='submit'>
+            <Button outline gradientDuoTone='purpleToPink'disable= {loading} type='submit'>
               {
                 loading ?
                 <>

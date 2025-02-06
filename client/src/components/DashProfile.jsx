@@ -98,7 +98,6 @@ export default function DashProfile() {
     //   }
     // }
     setImageFileUploading(true);
-    setImageFileUploading(false);
     setImageFileUploadError(null);
     const storage = getStorage(app);
     const fileName = new Date().getTime() + imageFile.name;
@@ -127,7 +126,7 @@ export default function DashProfile() {
           setFormData({ ...formData, profilePicture: downloadURL });
           setImageFileUploading(false);
         });
-      }
+      },
     );
   };
   const handleChange = (e) => {
@@ -147,6 +146,7 @@ export default function DashProfile() {
     }
     try {
       dispatch(updateStart());
+      console.log(formData)
       const res = await fetch(`/api/user/update/${currentUser._id}`, {
         method: 'PUT',
         headers: {
@@ -175,7 +175,7 @@ export default function DashProfile() {
         <input
           type='file'
           accept='image/*'
-          onChange={handleImageChange}
+          onChange={handleImageChange} 
           ref={filePickerRef}
           hidden
         />
@@ -234,8 +234,7 @@ export default function DashProfile() {
           <TextInput type='password' id='password' placeholder='password ' onChange={handleChange}/>
           <Button
           type='submit'
-          className='bg-gradient-to-r from-black via-gray-900 to-gray-600 hover:bg-gradient-to-l to-gray-600 via-gray-900 from-black'
-          outline
+          outline gradientDuoTone='purpleToPink'
           disabled={loading || imageFileUploading}
         >
           {loading ? 'Loading...' : 'Update'}
