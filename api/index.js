@@ -5,6 +5,7 @@ import userRouters from "./routes/user.route.js"
 import authRouters from "./routes/auth.route.js"
 import cookieParser from 'cookie-parser';
 import postRoutes from './routes/post.route.js';
+import commentRoutes from './routes/comment.route.js';
 
 dotenv.config()
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use("/api/user",userRouters)
 app.use("/api/auth",authRouters)
 app.use('/api/post', postRoutes);
+app.use('/api/comment', commentRoutes);
 
 app.listen(3000,()=>{
     console.log("server running in port 3000")
